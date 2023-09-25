@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "YeniUrunler";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form method="post" class="form-group">
+
+    
+    <div>
+        <label>Urun ADI</label>
+        <input type="text" class="form-control" name="URUNAD" />
+    </div>
+    <div >
+        <label>Urun Markası</label>
+        <input type="text" class="form-control" name="MARKA" />
+    </div>
+    <div >
+        <label>Urun Kategori</label>
+        <input type="text" class="form-control" name="URUNKATEGORI" />
+    </div>
+    <div >
+        <label>Urun Fiyatı</label>
+        <input type="text" class="form-control" name="FİYAT" />
+    </div>
+    <div>
+        <label>Urun STOK</label>
+        <input type="text" class="form-control" name="STOK" />
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info">URUN EKLE</button>
+    </div>
+</form>
+

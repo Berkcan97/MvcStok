@@ -1,0 +1,35 @@
+﻿@using MvcStok.Entity
+
+@model List<Tblsatislar>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+
+    <tr>
+
+        <td>Satıs ID</td>
+        <td>Urun</td>
+        <td>Musteri</td>
+        <td>Adet</td>
+        <td>Fiyat</td>
+
+    </tr>
+    <tbody>
+    @foreach (var sts in Model)
+    {
+        <tr>
+
+            <td>@sts.Satisid</td>
+            <td>@sts.Urun</td>
+            <td>@sts.Musteri</td>
+            <td>@sts.Adet</td>
+            <td>@sts.Fİyat</td>
+
+        </tr>
+    }
+    </tbody>
+</table>
+

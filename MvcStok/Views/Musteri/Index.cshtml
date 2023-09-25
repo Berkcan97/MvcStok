@@ -1,0 +1,38 @@
+﻿@using MvcStok.Entity
+
+@model List<Tblmusteriler>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+
+    <tr>
+        <td>Musteri ID</td>
+        <td>Musteri Ad</td>
+        <td>Musteri Soyad</td>
+        <td>Sil</td>
+        <td>Güncelle</td>
+
+    </tr>
+
+
+    @foreach (var mus in Model)
+    {
+        <tr>
+            
+            <td>@mus.Musteriid</td>
+            <td>@mus.Musteriad</td>
+            <td>@mus.Musterisoyad</td>
+            <td><a href="Musteri/Sil/@mus.Musteriid" class="btn btn-danger">Sil</a></td>
+            <td><a href="Musteri/Güncelle/@mus.Musteriid" class="btn btn-success">Güncelle</a></td>
+            
+
+            
+        </tr>
+    }
+</table>
+
+<a href="/Musteri/YeniMusteri/" class="btn btn-primary">Yeni Musteri Ekle</a>
+
